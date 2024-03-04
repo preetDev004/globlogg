@@ -1,0 +1,91 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="container-style">
+  <div
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-auto row-style"
+  >
+    {% for blog in blogs %}
+    <div class="card m-2 position-relative card-size" style="width: 18rem">
+      <img
+        src="{{blog.img_url}}"
+        class="card-img-top img-style"
+        alt="Blog_image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title|truncatechars:15 }}</h5>
+        {% comment %} | truncate(50) {% endcomment %}
+        <p class="card-text desc-text">
+          {{ blog.description|truncatechars:50 }}
+          <a class="see-more" href="/viewBlog/{{blog.id}}/">See more</a>
+        </p>
+      </div>
+      <div class="ms-auto">
+        <a href="/editBlog/{{blog.id}}/" class="btn btn-success card-button">Edit</a>
+        <button
+          type="button"
+          class="btn btn-danger card-button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Delete
+        </button>
+
+        <!-- delete modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content m-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Are you sure?
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">You want to delete the blog.</div>
+              <div class="modal-footer">
+                <p
+                  class="cancel"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </p>
+                <a
+                  href="/deleteBlog/{{blog.id}}/"
+                  type="button"
+                  class="btn btn-danger"
+      
+                >
+                <!-- data-bs-toggle="modal"
+                data-bs-target="#exampleModal" -->
+                  Delete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-bottom">
+        
+      </div>
+      <span
+        class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger badge-font"
+      >
+        {{blog.category}}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

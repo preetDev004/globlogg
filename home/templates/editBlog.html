@@ -1,0 +1,90 @@
+{% extends "layout.html" %} {% block body %}
+<div class="mx-2 add-container">
+  <h2 class="title">Edit Blog</h2>
+  <p class="py-6">Use the below form to add a new Blog.</p>
+  <br />
+  <form class="mx-2 form-style" method="post">
+    {% csrf_token %}
+    <div class="form-in-style">
+      <div>
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input
+          required
+          value="{{blog.title}}"
+          name="title"
+          type="text"
+          class="w-100 focus-outline-none rounded-3 px-3 py-2 focus-border-success"
+          id="exampleInput"
+          placeholder="Enter the title"
+        />
+        <div id="emailHelp" class="form-text">
+          Provide suitable title to your blog.
+        </div>
+      </div>
+      <div class="">
+        <label for="exampleInputDesc" class="form-label">Image URL</label>
+        <input
+          required
+          name="img_url"
+          type="url"
+          value="{{blog.img_url}}"
+          placeholder="Enter the image-url"
+          class="w-100 focus-outline-none rounded-3 px-3 py-2 focus-border-success"
+          id="exampleInputdesc"
+        />
+        <div id="emailHelp" class="form-text">
+          Give the link of the related image.
+        </div>
+      </div>
+      <div class="dropdown-style">
+        <label for="exampleInputDesc" class="form-label">Category</label>
+        <select required name="category" id="categorySelect" class="w-100 rounded-3">
+          <option {% if blog.category == 'Entertainment' %}selected{% endif %} value="Entertainment">Entertainment</option>
+          <option {% if blog.category == 'Business' %}selected{% endif %} value="Business">Business</option>
+          <option {% if blog.category == 'Food' %}selected{% endif %} value="Food">Food</option>
+          <option {% if blog.category == 'Technology' %}selected{% endif %} value="Technology">Technology</option>
+          <option {% if blog.category == 'Games' %}selected{% endif %} value="Games">Games</option>
+          <option {% if blog.category == 'Adventure' %}selected{% endif %} value="Adventure">Adventure</option>
+          <option {% if blog.category == 'Travel' %}selected{% endif %} value="Travel">Travel</option>
+        </select>
+        <div id="emailHelp" class="form-text">
+          Select category for your blog.
+        </div>
+      </div>
+      <div class="">
+        <label for="exampleInputDesc" class="form-label">Description</label>
+        <textarea
+          required
+          name="description"
+          placeholder="Enter the blog details"
+          class="w-100 focus-outline-none rounded-3 px-3 py-1 focus-border-success"
+          id="exampleInputdesc"
+        >{{blog.description}}</textarea>
+        <div id="emailHelp" class="form-text">
+          Write the content of your blog.
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="btn-container w-100 focus-outline-none rounded-3 focus-border-success"
+    >
+      <button type="submit" class="btn btn-container-color m-0 w-100">
+        Edit
+      </button>
+    </div>
+  </form>
+  <br />
+  <br />
+  {% if exception %}
+  <div
+    class="d-flex align-items-center justify-content-center gap-2 w-100 px-2"
+  >
+    <div class="alert alert-danger w-100" role="alert">
+      {{exception}} <a href="/editBlog/{{blog.id}}/" class="alert-link">Try again!</a>.
+    </div>
+  </div>
+
+  {% endif %}
+</div>
+{% endblock %}

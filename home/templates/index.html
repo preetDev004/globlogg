@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block body %}
+{% if blogs %}
+<div class="container text-center form-style search">
+  <form class="d-flex ">
+    <input class="me-2 " name="search" type="text" placeholder="Search by Title" aria-label="Search">
+    <button class="btn btn-outline-success " type="submit">Search</button>
+  </form>
+</div>
+<br>
+{% endif %}
+<div class="container-style">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-auto row-style">
+    
+    {% for blog in blogs %}
+    <div class="card m-2 position-relative card-size" style="width: 18rem">
+        <img src="{{blog.img_url}}" class="card-img-top img-style" alt="Blog_image" /> 
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title|truncatechars:27}}</h5>
+        {% comment %} | truncate(50) {% endcomment %}
+        <p class="card-text desc-text">{{ blog.description|truncatechars:70 }}</p>
+      </div>
+      <a href="/viewBlog/{{blog.id}}/" class="btn btn-success card-button">View</a>
+      <div class="card-bottom">  
+        Published by {{blog.user.username}}
+      </div>
+      <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger badge-font">
+        {{blog.category}}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </div>
+    {% endfor %}
+    {% if not blogs %}
+    <div>
+      <h3>No Blogs Found!</h3>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

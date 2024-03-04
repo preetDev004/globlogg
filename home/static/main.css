@@ -1,0 +1,250 @@
+.title {
+  color: #50c878;
+}
+.btn-color {
+  border: 2px solid #50c878;
+  color: #50c878;
+}
+.btn-color:hover {
+  background-color: #42a463;
+  /* color: #50C878;
+      border: 2px solid #50C878; */
+}
+body {
+  background: #212529;
+  color: white;
+  overflow-x: hidden;
+  width: 100vw;
+}
+body::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+.card {
+  background-color: rgb(24 27 32);
+  border: 1px solid rgb(84 90 106);
+  border-radius: 20px;
+  padding: 0;
+}
+.img-style {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+.container-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.row-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.desc-text {
+  color: rgb(186, 186, 186);
+  font-size: 14px;
+}
+.card-button {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.card-bottom {
+  font-size: small;
+  color: gray;
+  margin-left: auto;
+  padding: 10px 10px;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 2rem;
+}
+.add-container p {
+  color: rgb(169, 169, 169);
+  font-size: 15px;
+}
+.form-style {
+  /* margin: auto; */
+  width: 100%;
+  /* display: grid;
+    grid-template-columns: auto auto; */
+  /* column-span: 2; */
+}
+.form-in-style {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; /* On small devices, one column */
+}
+
+@media screen and (min-width: 768px) {
+  .form-in-style {
+    grid-template-columns: 1fr 1fr; /* On larger devices, two columns */
+  }
+}
+.form-style > div > div {
+  margin: 4px 4px;
+  padding: 4px;
+}
+.form-style input {
+  border: 1px solid gray;
+  background: #1b1e22;
+  outline: none;
+  color: rgba(255, 255, 255, 0.845);
+}
+.form-style input:focus {
+  border: 1px solid #50c878!important;
+  background: #1b1e22;
+  outline: none!important;
+}
+.search{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input{
+  padding: 6px;
+  margin: auto;
+  border-radius: 5px;
+}
+.div-search {
+  margin: 1em;
+  position: relative;
+}
+.div-search  input {
+  padding: 1em 1em 1em 3em;
+}
+.div-search  i {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  opacity: 0.6;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+.form-style textarea {
+  border: 1px solid gray;
+  background: #1b1e22;
+  outline: none;
+  color: rgba(255, 255, 255, 0.845);
+}
+.form-style textarea:focus {
+  border: 1px solid #50c878;
+  background: #1b1e22;
+  outline: none;
+}
+.dropdown-style {
+  display: flex;
+  flex-direction: column;
+  width: 99.1%;
+}
+.dropdown-style select {
+  background: #1b1e22;
+  outline: none;
+  color: rgba(255, 255, 255, 0.845);
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+  padding-right: 1.5rem !important;
+  padding-left: 1rem !important;
+}
+.dropdown-style select:focus {
+  border: 1px solid #50c878;
+  background: #1b1e22;
+  outline: none;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+.btn-container-color {
+  border: 2px solid #42a463;
+  background-color: #42a463;
+}
+.btn-container-color:hover {
+  border: 2px solid #50c878;
+  color: #50c878;
+  background: #212529;
+}
+.badge-font{
+  font-weight: 600;
+  font-size: normal;
+}
+.img-style{
+  max-height: 220px;
+  object-fit: cover;
+  min-height: 220px;
+}
+.card-size{
+  min-height: 400px;
+}
+.see-more{
+  text-decoration: none;
+  color: #42a463;
+  font-size: small;
+}
+.m-content{
+  color: white;
+  background-color: #1e2124;
+}
+.cancel{
+  color: rgb(183, 183, 183);
+  padding:10px ;
+  cursor: pointer;
+}
+.cancel:hover{
+  color: white;
+}
+.view-title{
+  color: #50c878;
+  font-size:xx-large;
+  font-weight:bolder;
+  background: #191B20;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.view-content{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns:1fr;
+  gap: 20px;
+  place-items: center;
+}
+
+.content > p{
+  color: rgb(219, 219, 219);
+}
+
+.img-ride{
+  border-radius: 10px;
+  max-height: 600px;
+}
+.account{
+  color: #50c878!important;
+  border-radius: 4px;
+  padding:8px;
+}
+.account:hover{
+  color: #44aa66!important;
+
+  /* text-decoration: underline; */
+}
+@media screen and (min-width: 991px) {
+  .acc-dropdown{
+    margin-left: -70%;
+  }
+}
