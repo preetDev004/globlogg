@@ -1,18 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
-CATEGORY_CHICES = {
-    "ENTERTAINMENT": "Entertainment",
-    "BUSINESS": "Business",
-    "TECHNOLOGY": "Technology",
-    "FOOD": "Food",
-    "GAMES": "Games",
-    "ADVENTURE": "Adventure",
-    "TRAVEL":'Travel'
-}
-
+# Blog model
 class Blog(models.Model):
+    # using django's inbuilt User model
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField()
     description = models.TextField()

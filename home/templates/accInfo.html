@@ -1,5 +1,12 @@
 {% extends "layout.html" %} {% block body %}
-
+<div class="container overflow-hidden">
+  <div class="view-title text-center">
+    <h1>{{request.user.username}}</h1>
+    <span class="text-muted fw-normal fs-6"><strong>Date Joined:</strong>{{' '}} {{request.user.date_joined}}</span>
+  </div>
+  <br />
+  <br />
+</div>
 <div class="container-style">
   <div
     class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-auto row-style"
@@ -20,7 +27,9 @@
         </p>
       </div>
       <div class="ms-auto">
-        <a href="/editBlog/{{blog.id}}/" class="btn btn-success card-button">Edit</a>
+        <a href="/editBlog/{{blog.id}}/" class="btn btn-success card-button"
+          >Edit</a
+        >
         <button
           type="button"
           class="btn btn-danger card-button"
@@ -53,19 +62,13 @@
               </div>
               <div class="modal-body">You want to delete the blog.</div>
               <div class="modal-footer">
-                <p
-                  class="cancel"
-                  data-bs-dismiss="modal"
-                >
-                  Cancel
-                </p>
+                <p class="cancel" data-bs-dismiss="modal">Cancel</p>
                 <a
                   href="/deleteBlog/{{blog.id}}/"
                   type="button"
                   class="btn btn-danger"
-      
                 >
-                <!-- data-bs-toggle="modal"
+                  <!-- data-bs-toggle="modal"
                 data-bs-target="#exampleModal" -->
                   Delete
                 </a>
@@ -74,9 +77,7 @@
           </div>
         </div>
       </div>
-      <div class="card-bottom">
-        
-      </div>
+      <div class="card-bottom"></div>
       <span
         class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger badge-font"
       >
