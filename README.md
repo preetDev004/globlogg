@@ -14,13 +14,13 @@
         + typing_extensions==4.9.0
 
     - Installation Instructions: 
-        1. Clone the repository: **git clone https://github.com/BTP405/project-1-group-12.git globlogg-project**
-        2. Navigate to the project directory: **cd globlogg-project**
-        3. Start the virtual environment: **source tst/bin/activate**
-        4. Install Python dependencies: **pip install -r requirements.txt**
-        5. Create and configure database: **settings.py**
-        6. Set up the database by running migrations: **python manage.py migrate**
-        7. Start the development server: **python manage.py runserver**
+        1. Clone the repository: git clone https://github.com/BTP405/project-1-group-12.git globlogg-project
+        2. Navigate to the project directory: cd globlogg-project
+        3. Start the virtual environment: source tst/bin/activate
+        4. Install Python dependencies: pip install -r requirements.txt
+        5. Create and configure database: settings.py
+        6. Set up the database by running migrations: python manage.py migrate
+        7. Start the development server: python manage.py runserver
         
 ## 3. Usage
     - Examples: 
@@ -29,8 +29,8 @@
         c. To search a blog post, navigate to home and type the title in search bar and click on search.
 
     - Configuration: 
-        1. Ensure your database settings in **settings.py** are correctly configured.
-        2. Customize the **CATEGORIES** list in **constants.py** to add or remove blog categories.
+        1. Ensure your database settings in settings.py are correctly configured.
+        2. Customize the CATEGORIES list in constants.py to add or remove blog categories.
 
 ## 4. Features
     - List of Features: 
@@ -41,8 +41,8 @@
 
 ## 5. Contributing
     - Guidelines: 
-        **Fork the repository and create a pull request for your contributions.**
-        **Ensure your code adheres to the project's style guide.**
+        Fork the repository and create a pull request for your contributions.
+        Ensure your code adheres to the project's style guide.
 
     - Code Style: If applicable, provide guidelines or references to your code style.
 
@@ -54,7 +54,7 @@
         3. Aastha Kalpeshkumar Patel
 
     - Acknowledgments: 
-        Special thanks to the **Django community** for **Django Docs**  which helped in this project.
+        Special thanks to the Django community for Django Docs  which helped in this project.
 
 
 ## 7. License
