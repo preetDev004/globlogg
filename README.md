@@ -1,6 +1,3 @@
-
-### Please use the following template to add a ReadMe for your repo.
-
 ## 1. Project Title and Description
     - Title: GloBlogg
     - Description: GloBlogg is a blogging platform where users can explore and create blogs across various categories. After creating an account, users can not only view blogs but also create, edit, and delete their own blog posts. The platform provides a personalized dashboard where users can manage their blogs, enhancing their engagement with the content.
@@ -49,17 +46,20 @@
 
     - Code Style: If applicable, provide guidelines or references to your code style.
 
-## 6. Credits
+### 6. Credits
+
     - Authors: 
-        i. Preet Dineshkumar Patel
-        ii. Madhav Rajpal
-        iii. Aastha Kalpeshkumar Patel
+        1. Preet Dineshkumar Patel
+        2. Madhav Rajpal
+        3. Aastha Kalpeshkumar Patel
 
     - Acknowledgments: 
         Special thanks to the `Django community` for `Django Docs`  which helped in this project.
 
+
 ## 7. License
-    - License Information: Specify the license under which your project is distributed.
+    - License Information:
+        Specify the license under which your project is distributed.
     
 ## 8. Additional Sections (Optional)
     - FAQ: Include frequently asked questions and their answers.
