@@ -69,3 +69,8 @@
         1. You need to create a .env file and add your database credentials in it.
         2. The 'tst' is a virtual environment folder which is not necessary to have.
 
+    - FAQ: Include frequently asked questions and their answers.
+    - Troubleshooting: Provide solutions to common issues or troubleshooting tips.
+    - Roadmap: Outline the future development plans for your project.
+    - Changelog: Document changes and updates to your project over time.
+
