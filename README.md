@@ -1,6 +1,9 @@
 ## 1. Project Title and Description
     - Title: GloBlogg
-    - Description: GloBlogg is a blogging platform where users can explore and create blogs across various categories. After creating an account, users can not only view blogs but also create, edit, and delete their own blog posts. The platform provides a personalized dashboard where users can manage their blogs, enhancing their engagement with the content.
+    - Description: GloBlogg is a blogging platform where users can explore and create blogs across various categories. 
+                   After creating an account, users can not only view blogs but also create, edit, and delete their own blog posts. 
+                   The platform provides a personalized dashboard where users can manage their blogs, enhancing their engagement
+                   with the content.
 
 ## 2. Installation
     - Dependencies: 
@@ -16,7 +19,7 @@
     - Installation Instructions: 
         1. Clone the repository: git clone https://github.com/BTP405/project-1-group-12.git globlogg-project
         2. Navigate to the project directory: cd globlogg-project
-        3. Start the virtual environment: source tst/bin/activate
+        3. (optional) Start the virtual environment: source tst/bin/activate 
         4. Install Python dependencies: pip install -r requirements.txt
         5. Create and configure database: settings.py
         6. Set up the database by running migrations: python manage.py migrate
@@ -62,7 +65,7 @@
         Specify the license under which your project is distributed.
     
 ## 8. Additional Sections (Optional)
-    - FAQ: Include frequently asked questions and their answers.
-    - Troubleshooting: Provide solutions to common issues or troubleshooting tips.
-    - Roadmap: Outline the future development plans for your project.
-    - Changelog: Document changes and updates to your project over time.
+    - NOTE:
+        1. You need to create a .env file and add your database credentials in it.
+        2. The 'tst' is a virtual environment folder which is not necessary to have.
+
