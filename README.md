@@ -1,3 +1,5 @@
+NOTE: For .env file please contact to the group.
+
 ## 1. Project Title and Description
     - Title: GloBlogg
     - Description: GloBlogg is a blogging platform where users can explore and create blogs across various categories. 
