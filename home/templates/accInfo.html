@@ -19,7 +19,7 @@
         alt="Blog_image"
       />
       <div class="card-body">
-        <h5 class="card-title">{{blog.title|truncatechars:15 }}</h5>
+        <h5 class="card-title">{{blog.title|truncatechars:20 }}</h5>
         {% comment %} | truncate(50) {% endcomment %}
         <p class="card-text desc-text">
           {{ blog.description|truncatechars:50 }}
