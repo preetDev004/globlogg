@@ -26,7 +26,7 @@ NOTE: For .env file please contact to the group.
         5. Create and configure database: settings.py
         6. Set up the database by running migrations: python manage.py migrate
         7. Start the development server: python manage.py runserver
-        
+    
 ## 3. Usage
     - Examples: 
         a. To create a new blog post, first login/signup then navigate to Create Blog and fill out the form.
