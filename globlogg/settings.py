@@ -80,7 +80,6 @@ WSGI_APPLICATION = 'globlogg.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
-
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
